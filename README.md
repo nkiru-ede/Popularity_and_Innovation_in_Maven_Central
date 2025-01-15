@@ -15,43 +15,43 @@ Use Python version 3.*, tested with 3.12.2
 | Input | Output |
 | --- | --- |
 | [Zenodo dataset](https://zenodo.org/records/13734581) | [links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350) |
-| Script | script/cypherQuery|
+| Script |[cypherQuery](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cypherQuery)|
 
 #### Step 2: Merge and clean datasets 
 
 | Script | Input | Output |
 | --- | --- | --- |
-| `scripts/cleanGoblinData.py`|[links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350) |`cleaned_final_output.csv`
+|[cleanGoblinData.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cleanGoblinData.py)|[links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350) |[cleaned_final_output.csv](https://zenodo.org/uploads/14184350)
 
 
 #### Step 3: Aggregate GAV to GA 
 | Script | Input | Output |
 | --- | --- | --- |
-|GAVtoGA.py |  [cleaned_final_output.csv](https://zenodo.org/uploads/14184350)| `plots/GAV_GA_counts`|
+|[GAVtoGA.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/GAVtoGA.py)|  [cleaned_final_output.csv](https://zenodo.org/uploads/14184350)| [GAV_GA_counts](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/plots/GAV_GA_counts.png)|
 
 
 
 #### Step 4: Compute gini
 | Script | Input | Output |
 | --- | --- | --- |
-|giniGA.py |[cleaned_final_output.csv](https://zenodo.org/uploads/14184350)| `plots/gini_GA`|
+|[giniGA.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/giniGA.py)|[cleaned_final_output.csv](https://zenodo.org/uploads/14184350)|[gini_GA](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/plots/gini_GA.png)|
 
 
 #### Step 6: Compute top GAs
 | Script | Input | Output |
 | --- | --- | --- |
-| script/top500GAs.py| [cleaned_final_output.csv](https://zenodo.org/uploads/14184350) |top500_per_year |
+|[top500GAs.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/top500GAs.py)| [cleaned_final_output.csv](https://zenodo.org/uploads/14184350) |[top500_per_year.csv](https://zenodo.org/uploads/14184350) |
 
 
 #### Step 7: Relative change in elites
 | Script | Input | Output |
 | ---| --- | --- |
-| script/eliteChange.py| [top500_per_year.csv](https://zenodo.org/uploads/14184350)  | `plot/FractionOfReplacement_minus2024`|
+|[eliteChange.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/eliteChange.py)| [top500_per_year.csv](https://zenodo.org/uploads/14184350)  |[FractionOfReplacement_minus2024](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/plots/FractionOfReplacement_minus2024.png)|
 
 #### Step 8: Innovation rate
 | Script | Input | Output |
 | ---| --- | --- |
-| script/innovationRate.py| [release_all.csv](https://zenodo.org/uploads/14184350) | `plot/MajorReleaseGA`|
+|[innovationRate.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/innovationRate.py)| [release_all.csv](https://zenodo.org/uploads/14184350) |[MajorReleaseGA](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/plots/MajorReleaseGA.png)|
 
 
 
