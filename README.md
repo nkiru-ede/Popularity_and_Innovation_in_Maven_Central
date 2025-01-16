@@ -63,10 +63,13 @@ Install the dependencies contained in [requirements.text](https://github.com/nki
 
 
 Paper - Popularity and Innovation in Maven Central.
+
+
 Authors: Nkiru Ede, Jens Dietrich, and Ulrich Z¨ulicke
 {nkiru.ede,jens.dietrich,uli.zuelicke}@vuw.ac.nz
 Victoria University of Wellington
 Wellington, New Zealand
+
 
 
 
