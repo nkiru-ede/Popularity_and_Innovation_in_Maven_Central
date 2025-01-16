@@ -1,7 +1,10 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+import os
 
-file_path = "path to dataset\\top500_per_year.csv" 
+current_dir = os.getcwd()
+file_path = os.path.join(current_dir, "top500_per_year.csv")
+
 df = pd.read_csv(file_path)
 
 df_grouped = df.groupby(['aggregated_artifact', 'dependency_release_year'], as_index=False)['dependency_count'].sum()
@@ -62,3 +65,4 @@ plt.legend(title='GAs', loc='upper right')
 plt.xticks(years)
 plt.tight_layout()
 plt.show()
+

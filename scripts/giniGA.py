@@ -1,10 +1,11 @@
-#GA gini
+# GA gini
 
 import pandas as pd
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 
-def calculate_gini_from_csv(file_path):
+def calculate_gini_from_csv():
     def gini_coefficient(x):
         """Compute Gini coefficient for an array x and return Lorenz curve."""
         x = np.array(x, dtype=float)
@@ -25,6 +26,9 @@ def calculate_gini_from_csv(file_path):
         gini = 1 - (2 / n) * np.sum(lorenz_curve[1:]) + (1 / n)
 
         return gini, lorenz_curve
+
+    current_dir = os.getcwd()
+    file_path = os.path.join(current_dir, "data", "npm", "merged_final_output.csv")
 
     df = pd.read_csv(file_path, encoding='ISO-8859-1')
     df = df.rename(columns={'source': 'Dependencies', 'target': 'Artifact', 'source_release': 'dependency_release_date', 'target_release': 'artifact_release_date'})
@@ -76,11 +80,7 @@ def calculate_gini_from_csv(file_path):
 
     return gini_per_year
 
-file_path = "path to dataset\\cleaned_final_output.csv"
-
-gini_per_year = calculate_gini_from_csv(file_path)
+gini_per_year = calculate_gini_from_csv()
 
 for year, gini in gini_per_year.items():
     print(f"Gini coefficient for year {year}: {gini:.4f}")
-    
-    

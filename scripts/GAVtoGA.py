@@ -1,9 +1,13 @@
 import pandas as pd
+import os
+
+current_dir = os.getcwd()
+
+input_file_path = os.path.join(current_dir, "cleaned_final_output.csv")
 
 yearly_counts = {}
 
-for chunk in pd.read_csv("path to dataset\\cleaned_final_output.csv", chunksize=100000):
-
+for chunk in pd.read_csv(input_file_path, chunksize=100000):
     chunk['year'] = chunk['source_release'].str[:4].astype(int)
 
     chunk['source_ga'] = chunk['source'].str.extract(r'(^[^:]+:[^:]+)')[0]
@@ -19,3 +23,7 @@ for chunk in pd.read_csv("path to dataset\\cleaned_final_output.csv", chunksize=
 aggregated_counts = pd.DataFrame(list(yearly_counts.items()), columns=['year', 'count'])
 
 print(aggregated_counts)
+
+
+
+
