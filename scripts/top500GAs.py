@@ -35,7 +35,7 @@ def main(input_csv, output_csv):
 
 if __name__ == "__main__":
     # set file paths based on the CWD
-    input_csv = os.path.join(os.getcwd(), "data", "cleaned_final_output.csv")
-    output_csv = os.path.join(os.getcwd(), "data", "top500_per_year.csv")
+    input_csv = os.path.join(os.getcwd(),  "cleaned_final_output.csv")
+    output_csv = os.path.join(os.getcwd(), "top500_per_year.csv")
     
     main(input_csv, output_csv)

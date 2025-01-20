@@ -3,7 +3,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import matplotlib.ticker as mticker
 
-file_path = os.path.join(os.getcwd(), "data", "release_all_new.csv")
+file_path = os.path.join(os.getcwd(), "release_all_new.csv")
 df = pd.read_csv(file_path)
 
 df['ga'] = df['artifact'].apply(lambda x: ':'.join(x.split(':')[:-1]))
