@@ -28,7 +28,7 @@ def calculate_gini_from_csv():
         return gini, lorenz_curve
 
     current_dir = os.getcwd()
-    file_path = os.path.join(current_dir, "data", "npm", "merged_final_output.csv")
+    file_path = os.path.join(current_dir, "cleaned_final_output.csv")
 
     df = pd.read_csv(file_path, encoding='ISO-8859-1')
     df = df.rename(columns={'source': 'Dependencies', 'target': 'Artifact', 'source_release': 'dependency_release_date', 'target_release': 'artifact_release_date'})
