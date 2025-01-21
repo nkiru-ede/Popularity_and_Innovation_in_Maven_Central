@@ -20,7 +20,7 @@ Install the dependencies contained in [requirements.text](https://github.com/nki
 
 | Script | Input | Output |
 | --- | --- | --- |
-|[cypherQuery](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cypherQuery) |[Zenodo dataset](https://zenodo.org/records/13734581)  |[links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350)
+|[cypherQuery](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cypherQuery) |[Goblin dataset](https://zenodo.org/records/13734581)  |[links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350)
 
 
  
