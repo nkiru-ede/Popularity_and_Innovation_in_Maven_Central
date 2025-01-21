@@ -18,10 +18,12 @@ Install the dependencies contained in [requirements.text](https://github.com/nki
 
 #### Step 1: Acquire dataset from [Jaime, Damien et al paper](https://dl.acm.org/doi/10.1145/3643991.3644879) paper and convert the database dump to csv using neo4j
 
-| Input | Output |
-| --- | --- |
-| [Zenodo dataset](https://zenodo.org/records/13734581) | [links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350) |
-| Script |[cypherQuery](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cypherQuery)|
+| Script | Input | Output |
+| --- | --- | --- |
+|[cypherQuery](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cypherQuery) |[Zenodo dataset](https://zenodo.org/records/13734581)  |[links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350)
+
+
+ 
 
 ##Note: Ensure the converted csvs links_all.csv and release_all.csv are saved in your current directory.
 
