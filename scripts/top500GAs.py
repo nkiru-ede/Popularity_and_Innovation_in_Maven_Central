@@ -6,7 +6,7 @@ def process_artifacts(file_path):
 
     #df['dependency_release_year'] = pd.to_datetime(df['source_release']).dt.year
     
-    df['dependency_release_year'] = df['source_release_date'].str[:4]
+    df['dependency_release_year'] = df['source_release'].str[:4]
 
     df['aggregated_artifact'] = df['target'].str.split(':').str[:2].str.join(':')
 
