@@ -10,7 +10,7 @@ output_path = os.path.join(current_dir, "cleaned_final_output.csv")
 source_target_df = pd.read_csv(source_target_path)
 artifact_release_df = pd.read_csv(artifact_release_path)
 
-artifact_release_df.rename(columns={'Artifact': 'source'}, inplace=True)
+artifact_release_df.rename(columns={'artifact': 'source'}, inplace=True)
 merged_source = pd.merge(source_target_df, artifact_release_df, on='source', how='left')
 merged_source.rename(columns={'release': 'source_release'}, inplace=True)
 artifact_release_df.rename(columns={'source': 'target'}, inplace=True)
