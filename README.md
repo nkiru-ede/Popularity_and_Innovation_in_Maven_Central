@@ -32,7 +32,7 @@ Note: Ensure the converted CSV files `links_all.csv` and `release_all.csv` are s
 #### Step 3: Aggregate GAVs to GAs 
 | Script | Input | Output |
 | --- | --- | --- |
-|[GAVtoGA.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/GAVtoGA.py)|  [cleaned_final_output.csv](https://doi.org/10.5281/zenodo.14184349)| [GAV_GA_counts](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/plots/GAV_GA_counts.png)|
+|[GAVtoGA.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/GAVtoGA.py)|  [cleaned_final_output.csv](https://doi.org/10.5281/zenodo.14184349)| [GAV_GA_counts](https://doi.org/10.5281/zenodo.14184349)|
 
 
 
