@@ -17,7 +17,7 @@
 
 | Script | Input | Output |
 | --- | --- | --- |
-|[cypherQuery](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cypherQuery) |[Goblin dataset](https://zenodo.org/records/13734581)  |[links_all.csv, release_all.csv](https://doi.org/10.5281/zenodo.14184349)
+|[cypherQuery](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cypherQuery) |[Goblin dataset](https://doi.org/10.5281/zenodo.10605655)  |[links_all.csv, release_all.csv](https://doi.org/10.5281/zenodo.14184349)
 
 
 Note: Ensure the converted CSV files `links_all.csv` and `release_all.csv` are saved in your current directory.
@@ -26,7 +26,7 @@ Note: Ensure the converted CSV files `links_all.csv` and `release_all.csv` are s
 
 | Script | Input | Output |
 | --- | --- | --- |
-|[cleanGoblinData.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cleanGoblinData.py)|[links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350) |[cleaned_final_output.csv](https://doi.org/10.5281/zenodo.14184349)
+|[cleanGoblinData.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cleanGoblinData.py)|[links_all.csv, release_all.csv](https://doi.org/10.5281/zenodo.14184349) |[cleaned_final_output.csv](https://doi.org/10.5281/zenodo.14184349)
 
 
 #### Step 3: Aggregate GAVs to GAs 
