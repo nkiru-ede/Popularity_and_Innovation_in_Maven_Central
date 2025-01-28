@@ -4,28 +4,23 @@
 
 ### Prerequisites
 
-Install neo4j (version 4.x)
+1. Install neo4j (version 4.x)
+2. Use Python version 3.*, tested with 3.12.2
+3. Install the dependencies contained in [requirements.text](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/requirements.txt)
 
-Use Python version 3.*, tested with 3.12.2
-
-Install the dependencies contained in [requirements.text](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/requirements.txt)
-
-#Note: To install dependencies on MacOs, you may need to use 'brew' command
-
+*Note: To install dependencies on MacOS, you may want to use `brew`*
 
 
 ### Steps
 
-#### Step 1: Acquire dataset from [Jaime, Damien et al paper](https://dl.acm.org/doi/10.1145/3643991.3644879) paper and convert the database dump to csv using neo4j
+#### Step 1: Acquire dataset from [Damien et al: Goblin: A Framework for Enriching and Querying the Maven Central Dependency Graph. MSR'24](https://dl.acm.org/doi/10.1145/3643991.3644879) and convert the database dump to csv
 
 | Script | Input | Output |
 | --- | --- | --- |
 |[cypherQuery](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cypherQuery) |[Goblin dataset](https://zenodo.org/records/13734581)  |[links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350)
 
 
- 
-
-##Note: Ensure the converted csvs links_all.csv and release_all.csv are saved in your current directory.
+Note: Ensure the converted CSV files `links_all.csv` and `release_all.csv` are saved in your current directory.
 
 #### Step 2: Merge and clean datasets 
 
@@ -34,14 +29,14 @@ Install the dependencies contained in [requirements.text](https://github.com/nki
 |[cleanGoblinData.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/cleanGoblinData.py)|[links_all.csv, release_all.csv](https://zenodo.org/uploads/14184350) |[cleaned_final_output.csv](https://zenodo.org/uploads/14184350)
 
 
-#### Step 3: Aggregate GAV to GA 
+#### Step 3: Aggregate GAVs to GAs 
 | Script | Input | Output |
 | --- | --- | --- |
 |[GAVtoGA.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/GAVtoGA.py)|  [cleaned_final_output.csv](https://zenodo.org/uploads/14184350)| [GAV_GA_counts](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/plots/GAV_GA_counts.png)|
 
 
 
-#### Step 4: Compute gini
+#### Step 4: Compute GINIs
 | Script | Input | Output |
 | --- | --- | --- |
 |[giniGA.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/giniGA.py)|[cleaned_final_output.csv](https://zenodo.org/uploads/14184350)|[gini_GA](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/plots/gini_GA.png)|
@@ -64,13 +59,8 @@ Install the dependencies contained in [requirements.text](https://github.com/nki
 |[innovationRate.py](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/scripts/innovationRate.py)| [release_all.csv](https://zenodo.org/uploads/14184350) |[MajorReleaseGA](https://github.com/nkiru-ede/Popularity_and_Innovation_in_Maven_Central/blob/main/plots/MajorReleaseGA.png)|
 
 
-Paper - Popularity and Innovation in Maven Central.
-
-
-Authors: Nkiru Ede, Jens Dietrich, and Ulrich Z¨ulicke
-{nkiru.ede,jens.dietrich,uli.zuelicke}@vuw.ac.nz
-Victoria University of Wellington
-Wellington, New Zealand
+## Paper
+[Nkiru Ede](https://ecs.wgtn.ac.nz/Main/GradFavourEde), [Jens Dietrich](https://people.wgtn.ac.nz/jens.dietrich), and [Ulrich Zülicke](https://people.wgtn.ac.nz/uli.zuelicke): Popularity and Innovation in Maven Central. [22nd International Conference on Mining Software Repositories (MSR'25), Mining Challenge Track](https://2025.msrconf.org/).
 
 
 
